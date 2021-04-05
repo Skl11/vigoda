@@ -1,0 +1,12 @@
+[Unit] 
+Description=Telegram Bot 
+After=network.target
+
+[Service] 
+User=skl11
+Group=skl11
+
+WorkingDirectory=/home/skl11/vigoda/ Environment="PYTHONPATH=/home/skl11/vigoda/" ExecStart=/home/skl11/vigoda/.venv/bin/python /home/skl11/vigoda/main.py
+
+[Install] 
+WantedBy=multi-user.target
